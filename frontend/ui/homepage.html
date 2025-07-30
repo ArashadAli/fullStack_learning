@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hardware Store - Best Tech Deals</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f4f7;
+      color: #1b1f24;
+    }
+
+    header {
+      background-color: #0f172a;
+      color: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      margin: 0;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    .signup-btn {
+      background-color: #38bdf8;
+      color: #0f172a;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .signup-btn:hover {
+      background-color: #0ea5e9;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), 
+                  url('https://images.unsplash.com/photo-1581093588401-2f33e83c1b3f') no-repeat center/cover;
+      color: white;
+      text-align: center;
+      padding: 6rem 1rem;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero button {
+      background-color: #38bdf8;
+      color: #0f172a;
+      padding: 0.9rem 1.7rem;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .hero button:hover {
+      background-color: #0ea5e9;
+    }
+
+    section {
+      padding: 3rem 2rem;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .feature {
+      background-color: white;
+      flex: 1;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      text-align: center;
+      min-width: 250px;
+    }
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-around;
+    }
+
+    .product-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+      padding: 1rem;
+      text-align: center;
+      width: 250px;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .testimonial {
+      background-color: #e0f2fe;
+      padding: 2rem;
+      border-left: 4px solid #0ea5e9;
+      margin: 1rem 0;
+      font-style: italic;
+    }
+
+    footer {
+      background-color: #0f172a;
+      color: #ffffff;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .features, .products {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav {
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>TechGear Hub</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">Contact</a>
+      <a href="signup" class="signup-btn">Sign Up</a>
+      <!-- <button class="signup-btn">Sign Up</button> -->
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h2>Your One-Stop Shop for Hardware</h2>
+    <p>High-performance tools, durable accessories, and cutting-edge gear delivered at your doorstep.</p>
+    <button>Shop Now</button>
+  </div>
+
+  <section>
+    <h2 style="text-align:center;">Why Choose Us</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>Premium Quality</h3>
+        <p>Only the best tested and certified hardware tools.</p>
+      </div>
+      <div class="feature">
+        <h3>Fast Delivery</h3>
+        <p>Get your gear delivered in 24-48 hours across major cities.</p>
+      </div>
+      <div class="feature">
+        <h3>Affordable Prices</h3>
+        <p>Top-notch products without breaking your wallet.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 style="text-align:center;">Featured Products</h2>
+    <div class="products">
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7" alt="Drill">
+        <h3>Cordless Drill</h3>
+        <p>₹3,499</p>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1597008764628-df30b3c01033" alt="Tool Kit">
+        <h3>Full Tool Kit</h3>
+        <p>₹2,899</p>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1606507731091-f8bdad53c222" alt="Screwdriver Set">
+        <h3>Screwdriver Set</h3>
+        <p>₹899</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 style="text-align:center;">Customer Reviews</h2>
+    <div class="testimonial">
+      <p>"I bought a toolkit and cordless drill from TechGear Hub, and the quality is superb. Highly recommended!"</p>
+      <strong>- Rakesh Kumar, Delhi</strong>
+    </div>
+    <div class="testimonial">
+      <p>"Quick delivery and top-tier customer support. Will order again!"</p>
+      <strong>- Meena Patel, Mumbai</strong>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 TechGear Hub. All rights reserved.
+  </footer>
+
+</body>
+</html>
