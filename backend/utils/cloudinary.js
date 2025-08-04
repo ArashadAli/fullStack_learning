@@ -21,17 +21,16 @@ const uploadOnCloudinary = async (localFilePath) => {
         if(!fs.existsSync(absolutePath)){
             return null
         }
-        console.time("time when file is uploading")
        const response = await cloudinary.uploader.upload(absolutePath,{
             resource_type:"image"
         })
-        console.timeEnd("when the file is uploaded")
+        fs.unlinkSync(absolutePath)
         return response;
         
     } catch (error) {
         console.log("cloudinary file upload error : ",error)
         if(fs.existsSync(localFilePath)){
-             fs.unlinkSync(localFilePath); // remove the localFile from the server
+             fs.unlinkSync(localFilePath); 
              return null;
         }
     }

@@ -1,22 +1,23 @@
 import { uploadOnCloudinary } from "../utils/cloudinary.js";
+import { saveUser } from "./saveUser.js";
+import path from 'path'
+import { fileURLToPath } from "url";
+import { dirname } from "path";
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
 export const signupUser =async (req,res) => {
     try {
         const userdata = req.body
+        // const loginPath = path.join(__dirname,'../frontend/')
+        // console.log("userdata comes when the data is submitted password",userdata.password)
         const localpath = req.file?.path
-        console.log("localpath : ",localpath)
         const cloudinaryResponse = await uploadOnCloudinary(localpath)
-        console.log("cloudinary response :" ,cloudinaryResponse)
         if(!cloudinaryResponse){
         return res.status(500).json({message:"file upload on cloudinary is failed !",error:error})
         }
-              res.status(200).json({
-      message: "Data is uploaded successfully",
-      data: {
-        ...userdata,
-        profileImage: cloudinaryResponse.secure_url 
-      }
-    });
+       saveUser(userdata,cloudinaryResponse.secure_url)
+       res.sendFile(path.join(__dirname, '../../frontend/signup-login/login.html'));
     } catch (error) {
-        res.status(500).json({error:err.message})
+        res.status(500).json({error:error.message})
     }
 }
