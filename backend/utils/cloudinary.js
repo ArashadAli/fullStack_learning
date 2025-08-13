@@ -13,11 +13,13 @@ cloudinary.config({
 });
 
 const uploadOnCloudinary = async (localFilePath) => {
+    console.log("localfilePath : ",localFilePath)
     try {
         if(!localFilePath){
             return null
         }
         const absolutePath = path.resolve(localFilePath)
+        console.log("absolutePath : ",absolutePath)
         if(!fs.existsSync(absolutePath)){
             return null
         }

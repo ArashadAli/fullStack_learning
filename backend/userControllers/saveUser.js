@@ -28,9 +28,9 @@ const saveUser = async (userdata, image_url) => {
     name: userdata.fullname,
     email: userdata.email,
     password: hashedPassword,
-    image: image_url
+    image: image_url,
+    phone:userdata.phone
   }
-
   users.push(newUser)
 
   // 4. Save updated user list to JSON

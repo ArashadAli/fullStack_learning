@@ -2,7 +2,15 @@
   {
     "name": "Arashad Ali",
     "email": "arshad70806@gmail.com",
-    "password": "$2b$10$u2Y2MYv8DtxNnv591e.FFOft86r2zYH8Y3oo7m4OUTRKlXVjx3qKm",
-    "image": "https://res.cloudinary.com/arashadali/image/upload/v1754315867/tqzq6zua8ekxvzua84k6.png"
+    "password": "$2b$10$Iz/IbdWdr9JzhZ4OkeRZ5uBEP8b6vgU2uu6f.ZqDTCQTsDynoaMaq",
+    "image": "https://res.cloudinary.com/arashadali/image/upload/v1755110491/vluq8tdsmefujdmeywj7.png",
+    "phone": "7484096276"
+  },
+  {
+    "name": "Arashad Ali",
+    "email": "arshad70806@gmail.com",
+    "password": "$2b$10$Bk8ny7y04z44.NndU9r3UONM6Ci842viWUuf.Ner2qQXujuEqvl4.",
+    "image": "https://res.cloudinary.com/arashadali/image/upload/v1755110540/trzynqnmjmxuspkcwwr6.png",
+    "phone": "7484096276"
   }
 ]

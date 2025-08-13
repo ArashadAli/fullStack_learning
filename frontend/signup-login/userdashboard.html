@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Dashboard</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #f5f7fa;
+        color: #333;
+    }
+    header {
+        background-color: #1f2937;
+        color: white;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header h1 {
+        margin: 0;
+        font-size: 1.4rem;
+    }
+    .logout-btn {
+        text-decoration: none;
+        background-color: #e11d48;
+        color: white;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 5px;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+    .logout-btn:hover {
+        background-color: #be123c;
+    }
+    .container {
+        display: flex;
+        min-height: calc(100vh - 60px);
+    }
+    nav {
+        width: 230px;
+        background-color: #111827;
+        color: white;
+        padding-top: 20px;
+        flex-shrink: 0;
+    }
+    nav a {
+        display: block;
+        padding: 12px 20px;
+        color: white;
+        text-decoration: none;
+        font-size: 0.95rem;
+        transition: background 0.3s;
+    }
+    nav a:hover {
+        background-color: #374151;
+    }
+    main {
+        flex-grow: 1;
+        padding: 20px;
+    }
+    h2 {
+        margin-top: 0;
+    }
+    .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    .card {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transition: transform 0.2s;
+    }
+    .card:hover {
+        transform: translateY(-5px);
+    }
+    .card h3 {
+        margin-top: 0;
+        color: #111827;
+    }
+    .stats {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-top: 10px;
+        color: #2563eb;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>👤 My Dashboard</h1>
+    <a
+    href="#" 
+    class="logout-btn">Logout</a>
+</header>
+
+<div class="container">
+    <nav>
+        <a href="#">📦 My Orders</a>
+        <a href="#">❤️ Wishlist</a>
+        <a href="#">🛒 My Cart</a>
+        <a href="#">💳 Payment Methods</a>
+        <a href="#">📜 Order History</a>
+        <a href="#">⚙ Account Settings</a>
+    </nav>
+    <main>
+        <h2>Welcome back, Sarah!</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>Active Orders</h3>
+                <div class="stats">3</div>
+                <p>Orders currently being processed.</p>
+            </div>
+            <div class="card">
+                <h3>Wishlist Items</h3>
+                <div class="stats">12</div>
+                <p>Products you’ve saved for later.</p>
+            </div>
+            <div class="card">
+                <h3>Cart Value</h3>
+                <div class="stats">$245.99</div>
+                <p>Current total of items in your cart.</p>
+            </div>
+            <div class="card">
+                <h3>Reward Points</h3>
+                <div class="stats">560</div>
+                <p>Points available for discounts.</p>
+            </div>
+        </div>
+    </main>
+</div>
+</body>
+</html>

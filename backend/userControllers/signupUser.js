@@ -8,14 +8,15 @@ const __dirname = dirname(__filename)
 export const signupUser =async (req,res) => {
     try {
         const userdata = req.body
-        // const loginPath = path.join(__dirname,'../frontend/')
-        // console.log("userdata comes when the data is submitted password",userdata.password)
+        // console.log("Password : ",userdata.password)
         const localpath = req.file?.path
         const cloudinaryResponse = await uploadOnCloudinary(localpath)
         if(!cloudinaryResponse){
         return res.status(500).json({message:"file upload on cloudinary is failed !",error:error})
         }
-       saveUser(userdata,cloudinaryResponse.secure_url)
+      await saveUser(userdata,cloudinaryResponse.secure_url)
+      // here we can save the session and cookies of the user
+      
        res.sendFile(path.join(__dirname, '../../frontend/signup-login/login.html'));
     } catch (error) {
         res.status(500).json({error:error.message})

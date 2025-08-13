@@ -1,14 +1,17 @@
 import express from 'express'
 import cors from 'cors'
 import dotenv from 'dotenv'
+import cookieParser from'cookie-parser'
 dotenv.config({
     path:"./.env"
 })
-const server = express();
+export const server = express();
 server.use(cors({
     origin:'http://127.0.0.1:5500'
 }))
 server.use(express.urlencoded({extended:true}))
+server.use(express.json({limit:'200kb'}))
+server.use(cookieParser())
 server.get('/',(req,res) => {
     res.sendFile('homepage.html',{root:'../frontend/ui'})
 })
